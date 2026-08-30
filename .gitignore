@@ -1,0 +1,25 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Frontend environment
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+
+# Backend
+backend/.gradle/
+backend/build/
+
+# Backend environment
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+
+# IDE
+.idea/
+*.iml/
+.vscode/
