@@ -8,25 +8,25 @@ import {
 const features = [
   {
     icon: Code2,
-    title: "GitHub intelligence",
+    title: "GitHub Intelligence",
     description:
       "Repositories, contributions, languages, and activity brought together into one profile.",
   },
   {
     icon: Trophy,
-    title: "Competitive programming",
+    title: "Competitive Programming",
     description:
       "Track your problem-solving journey and understand how your skills evolve.",
   },
   {
     icon: BarChart3,
-    title: "Developer analytics",
+    title: "Developer Analytics",
     description:
       "Turn scattered activity into useful metrics that show your progress over time.",
   },
   {
     icon: FolderGit2,
-    title: "Project portfolio",
+    title: "Project Portfolio",
     description:
       "Showcase what you have actually built instead of letting your work disappear across repositories.",
   },

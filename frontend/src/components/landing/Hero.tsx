@@ -32,7 +32,7 @@ function Hero() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link to="/signup">
-          <button className="group flex h-11 items-center gap-2 rounded-lg bg-white px-6 text-sm font-medium text-black transition hover:bg-white/90">
+          <button className="group flex h-11 items-center gap-2 rounded-lg bg-white px-6 text-sm font-medium text-black transition hover:bg-white/90 cursor-pointer">
             Build your profile
 
             <ArrowRight
@@ -53,7 +53,7 @@ function Hero() {
       });
     }
   }}
-  className="flex h-11 items-center rounded-lg border border-white/10 bg-white/[0.02] px-6 text-sm text-white/60 transition hover:bg-white/[0.05] hover:text-white"
+  className="flex h-11 items-center rounded-lg border border-white/10 bg-white/[0.02] px-6 text-sm text-white/60 transition hover:bg-white/[0.05] hover:text-white cursor-pointer"
 >
   Explore DevLio
 </button>
@@ -72,8 +72,8 @@ function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               </div>
 
-              <div className="mx-auto px-20 py-1 text-[10px] text-white/20 sm:block hover:text-green-600">
-                devlio.dev
+              <div className=" font-bold mx-auto px-20 py-1 text-[10px] text-white/20 sm:block hover:text-green-600 transition ">
+                DevLio
               </div>
             </div>
 
@@ -84,23 +84,23 @@ function Hero() {
                 </div>
 
                 <div className="space-y-1 text-xs">
-                  <div className="rounded-md bg-white/10 px-3 py-2">
+                  <div className="rounded-md bg-white/10 px-3 py-2 cursor-pointer">
                     Overview
                   </div>
 
-                  <div className="px-3 py-2 text-white/30 hover:text-white">
+                  <div className="px-3 py-2 text-white/30 hover:text-white cursor-pointer">
                     GitHub
                   </div>
 
-                  <div className="px-3 py-2 text-white/30 hover:text-white">
+                  <div className="px-3 py-2 text-white/30 hover:text-white cursor-pointer">
                     Problems
                   </div>
 
-                  <div className="px-3 py-2 text-white/30 hover:text-white">
+                  <div className="px-3 py-2 text-white/30 hover:text-white cursor-pointer">
                     Projects
                   </div>
 
-                  <div className="px-3 py-2 text-white/30 hover:text-white">
+                  <div className="px-3 py-2 text-white/30 hover:text-white cursor-pointer">
                     Profile
                   </div>
                 </div>
@@ -108,7 +108,7 @@ function Hero() {
 
               <div className="p-6 sm:p-8">
                 <div className="mb-7">
-                  <p className="text-xs text-white/30">
+                  <p className="text-xs text-white">
                     Developer overview
                   </p>
 
@@ -156,7 +156,7 @@ function Hero() {
                       (height, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-sm bg-white/15"
+                          className="flex-1 rounded-sm bg-white/15  hover:bg-green-600 transition"
                           style={{ height: `${height}%` }}
                         />
                       ),

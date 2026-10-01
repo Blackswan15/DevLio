@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 function CTA() {
   return (
     <section id="how-it-works" className="px-6 py-24">
@@ -18,8 +18,8 @@ function CTA() {
           Create your DevLio profile and start turning your developer
           activity into something you can actually see.
         </p>
-
-        <button className="group mx-auto mt-8 flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90">
+        <Link to="/signup">
+        <button className="group mx-auto mt-8 flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 cursor-pointer">
           Get started
 
           <ArrowRight
@@ -27,6 +27,7 @@ function CTA() {
             className="transition-transform group-hover:translate-x-1"
           />
         </button>
+        </Link>
       </div>
     </section>
   );

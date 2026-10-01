@@ -37,12 +37,12 @@ function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link to="/login">
-            <button className="rounded-lg px-4 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white">
+            <button className="cursor-pointer rounded-lg px-4 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white">
               Login
             </button>
           </Link>
           <Link to="/signup">
-          <button className="group flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90">
+          <button className="cursor-pointer group flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90">
             Get started
 
             <ArrowRight

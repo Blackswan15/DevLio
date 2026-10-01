@@ -34,18 +34,18 @@ function Signup() {
                 <form onSubmit={handleSubmit} className="space-y-7">
                     <div>
                         <label htmlFor="username">Username</label>
-                        <input type="text" id="username" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your username" />
+                        <input type="text" id="username" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your username" required />
                     </div>
                     <div>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email"  className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your email" />
+                        <input type="email" id="email"  className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your email" required />
                     </div>
                     <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your password" />
+                        <input type="password" id="password" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your password" required minlength="8" />
                     </div>
 
-                    <button type="submit" className="w-full rounded-lg bg-lime-400 px-4 py-3 text-sm font-semibold text-black transition hover:bg-lime-400/90 ">
+                    <button type="submit" className=" cursor-pointer w-full rounded-lg bg-lime-400 px-4 py-3 text-sm font-semibold text-black transition hover:bg-lime-400/90 ">
                         Sign Up
                     </button>
                 </form>
