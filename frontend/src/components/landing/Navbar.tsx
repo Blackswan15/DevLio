@@ -1,7 +1,7 @@
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import devlioLogo from "../../assets/DevLio.png";
-
+import {Link}from "react-router-dom";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -36,10 +36,12 @@ function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <button className="rounded-lg px-4 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white">
-            Login
-          </button>
-
+          <Link to="/login">
+            <button className="rounded-lg px-4 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white">
+              Login
+            </button>
+          </Link>
+          <Link to="/signup">
           <button className="group flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90">
             Get started
 
@@ -48,6 +50,7 @@ function Navbar() {
               className="transition-transform group-hover:translate-x-0.5"
             />
           </button>
+          </Link>
         </div>
 
         <button

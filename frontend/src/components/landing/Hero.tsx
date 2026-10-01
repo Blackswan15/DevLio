@@ -4,6 +4,7 @@ import {
   Code2,
   Trophy,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pb-24 pt-40 sm:pt-48">
@@ -24,12 +25,13 @@ function Hero() {
           </span>
         </h1>
 
-        <p className="mx-auto mt-7 max-w-2xl text-base leading-7 hover:text-green-600 sm:text-lg">
+        <p className="mx-auto mt-7 max-w-2xl text-base leading-7 hover:text-green-600 duration-400 sm:text-lg">
           DevLio brings your GitHub activity, competitive programming,
           projects, and developer achievements together in one place.
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link to="/signup">
           <button className="group flex h-11 items-center gap-2 rounded-lg bg-white px-6 text-sm font-medium text-black transition hover:bg-white/90">
             Build your profile
 
@@ -38,13 +40,23 @@ function Hero() {
               className="transition-transform group-hover:translate-x-1"
             />
           </button>
+          </Link>
 
-          <a
-            href="#features"
-            className="flex h-11 items-center rounded-lg border border-white/10 bg-white/[0.02] px-6 text-sm text-white/60 transition hover:bg-white/[0.05] hover:text-white"
-          >
-            Explore DevLio
-          </a>
+          <button
+  onClick={() => {
+    const featuresSection = document.getElementById("features");
+
+    if (featuresSection) {
+      featuresSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }}
+  className="flex h-11 items-center rounded-lg border border-white/10 bg-white/[0.02] px-6 text-sm text-white/60 transition hover:bg-white/[0.05] hover:text-white"
+>
+  Explore DevLio
+</button>
         </div>
       </div>
 
