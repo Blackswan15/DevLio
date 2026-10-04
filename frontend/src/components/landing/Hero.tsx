@@ -67,9 +67,9 @@ function Hero() {
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#101012] shadow-2xl shadow-black/50">
             <div className="flex h-11 items-center border-b border-white/10 px-4">
               <div className="flex gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+                <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
               </div>
 
               <div className=" font-bold mx-auto px-20 py-1 text-[10px] text-white/20 sm:block hover:text-green-600 transition ">

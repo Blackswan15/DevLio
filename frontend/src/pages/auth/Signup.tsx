@@ -2,16 +2,35 @@ import AuthLayout from "../../components/auth/AuthLayout";
 import DevLioLogo from "../../assets/DevLio.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 function Signup() {
     const navigate = useNavigate();
     const [showSuccess,setShowSuccess] = useState(false);
-    const handleSubmit=(event)=>{
-        event.preventDefault();
+    const[name,setName] = useState("");
+    const[email,setEmail] = useState("");
+    const[password,setPassword] = useState("");
+    const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+        await axios.post("http://localhost:8080/api/auth/signup", {
+            username: name,
+            gmail: email,
+            password: password
+        });
+
         setShowSuccess(true);
-        setTimeout(()=>{
+
+        setTimeout(() => {
             navigate("/dashboard");
-        },2000)
-    };
+        }, 2000);
+
+    } catch (error) {
+        console.error("Error signing up:", error);
+    }
+};
+
+ 
     return (
         <AuthLayout>
             <div className="w-full max-w-md">
@@ -34,15 +53,15 @@ function Signup() {
                 <form onSubmit={handleSubmit} className="space-y-7">
                     <div>
                         <label htmlFor="username">Username</label>
-                        <input type="text" id="username" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your username" required />
+                        <input type="text" id="username" value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your username" required />
                     </div>
                     <div>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email"  className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your email" required />
+                        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your email" required />
                     </div>
                     <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your password" required minlength="8" />
+                        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-lime-400/50 focus:ring-1 focus:ring-lime-400/30" placeholder="Enter your password" required minLength={8} />
                     </div>
 
                     <button type="submit" className=" cursor-pointer w-full rounded-lg bg-lime-400 px-4 py-3 text-sm font-semibold text-black transition hover:bg-lime-400/90 ">
